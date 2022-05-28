@@ -1,0 +1,13 @@
+A data set is needed for the ML training & testing.
+Create a trainings set (.csv format) described in the HowToUse files
+in the VxcCreator and DensCreator folders respectively.
+
+Use the Prepare.py program to transform the trainings set (as .cvs file) into pickeled
+dictionary containing pytorch tensors, e.g.:
+
+python Prepare.py --name=12345 --data_dir=TrainingsSet/TrainingsSet_12345.csv
+
+The .gz can eventually be used as a
+data set file for the training & testing (via train.py and test.py)
+
+To run the train.py and test.py properly we refer to the README on github.

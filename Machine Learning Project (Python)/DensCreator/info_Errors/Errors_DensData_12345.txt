@@ -1,0 +1,8 @@
+The following Systems have been dropped:
+
++--------+--------+------------+-------+
+| System | at dim | nucs_array | Error |
++--------+--------+------------+-------+
++--------+--------+------------+-------+
+
+Total failures: 0.0 %

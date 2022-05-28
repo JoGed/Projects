@@ -1,0 +1,22 @@
+Create Vxc's based on information in a data file - e.g. DensData_12345.csv - which
+is has to be saved in a DensSets folder (look into the DensCreator folder for a 
+detailed description how to compute the densities via octopus).
+
+Type:
+
+python -u V_xc_CreatorSpin.py 12345 1.5*1e-8 1e-4 g > VxcOut.log 2>&1 
+
+- 12345    -> index
+- 1.5*1e-8 -> MSE max (treshold for convergence)
+- 1e-4     -> max{|Dens|} (treshold for convergence)
+- g        -> ground state (excited states not available, sorry)
+
+IMPORTANT: if fractional densities are desired - e.g. 0.3' and 0.5' fractionals - change "alpha = np.array([1.])" in 
+V_xc_CreatorSpin.py to "alpha = np.array([0.3, 0.5, 1.])"
+
+
+if Plots desired:
+python SimpleRowPlotterLatexSpin.py TrainingsSets/TrainingsSet_12345.csv 2 t p
+
+t -> dens + Vxc
+p -> external pot

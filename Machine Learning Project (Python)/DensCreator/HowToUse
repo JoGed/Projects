@@ -1,0 +1,18 @@
+Create Densities via:
+python -u DensCreator.py 12345 1 1-3 g > DensOut.log 2>&1 
+
+- 12345 -> index
+- 1     -> number of external potentials (per .csv file)
+- 1-3   -> Dens computed for 1-3 particles (I recommend to keep "1-3" if you want to compute the (fractional) xc potentials,
+           otherwise i do not know what is going to happen)
+- g     -> ground state (excited states not available, sorry)
+
+To change parameters (e.g. system size, resolution) look into the DensCreator.py file
+
+
+
+if Plots desired:
+python SimpleRowPlotterLatexSpin.py DensSets/DensData_12345.csv 2 d p
+
+d -> dens 
+p -> external pot
